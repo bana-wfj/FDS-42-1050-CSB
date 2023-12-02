@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>2511106839</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\HARDWARE\xp2116\xp2116.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_flash.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_pmu.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_rcu.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\..\HARDWARE\pingbuffer\c_buffer_stream.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_syscfg.h</file>
+            <file>$PROJ_DIR$\..\USER\main.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_pmu.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\xp2116.o</file>
+            <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_syscfg.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h</file>
+            <file>$PROJ_DIR$\Debug\List\FDS-42-1050-CSB.map</file>
+            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\c_buffer_stream.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_dma.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\xp2116.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm0.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\Include\cs32f0xx.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\Include\cs32f0xx_conf.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_wwdt.xcl</file>
+            <file>$PROJ_DIR$\Debug\Exe\FDS-42-1050-CSB.out</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_spi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_usart.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_adc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_spi.c</file>
+            <file>$PROJ_DIR$\..\HARDWARE\pingbuffer\pingbuffer.c</file>
+            <file>$PROJ_DIR$\..\HARDWARE\usart\usartx.c</file>
+            <file>$PROJ_DIR$\..\HARDWARE\xp2116\xp2116.c</file>
+            <file>$PROJ_DIR$\..\USER\main.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_exti.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_rcu.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_usart.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_debug.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_dma.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_gpio.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_syscfg.c</file>
+            <file>$PROJ_DIR$\RTE\Device\CS32F036F6P7\system_cs32f0xx.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_i2c.c</file>
+            <file>$PROJ_DIR$\RTE\Device\CS32F036F6P7\startup_cs32f036.S</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_flash.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_misc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_tim.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_crc.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_wwdt.c</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_fwdt.c</file>
+            <file>$PROJ_DIR$\RTE\RTE_Components.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_pmu.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\pingbuffer.xcl</file>
+            <file>$PROJ_DIR$\Debug\Exe\FDS-42-1050-CSB.bin</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_exti.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\.iar\config\linker\CS32F036F6P7.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_syscfg.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_cs32f036.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_adc.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_debug.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_pmu.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_flash.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_spi.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_gpio.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_usart.xcl</file>
+            <file>$PROJ_DIR$\..\HARDWARE\pingbuffer\pingbuffer.h</file>
+            <file>$PROJ_DIR$\..\HARDWARE\usart\usartx.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_cs32f0xx.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_dma.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\usartx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\pingbuffer.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_adc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\usartx.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_fwdt.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\FDS-42-1050-CSB.pbd</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_wwdt.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_i2c.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_adc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_tim.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_wwdt.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_tim.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_dma.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_crc.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_flash.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_crc.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_usart.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_cs32f0xx.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_fwdt.h</file>
+            <file>$PROJ_DIR$\..\HARDWARE\pingbuffer\c_buffer_stream.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_rcu.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_i2c.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_tim.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_rcu.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_spi.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_i2c.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_gpio.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_gpio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\c_buffer_stream.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_misc.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_misc.xcl</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_crc.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_exti.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_fwdt.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_debug.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_exti.o</file>
+            <file>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\inc\cs32f0xx_debug.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\cs32f0xx_misc.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 24 13</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\HARDWARE\pingbuffer\c_buffer_stream.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 16</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 104</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92 54 110 97 98 107 95 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\FDS-42-1050-CSB.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 13</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 53</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 57 79 87 61 83 114 85 112 102 78 116 62 99 100 58 80 27 81 4 72 59 90 71 9 25 89 14 10</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_adc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 109 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 100</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 26 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\HARDWARE\pingbuffer\pingbuffer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 54 110 97 98 107 95 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\HARDWARE\usart\usartx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 74</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68 54 110 97 98 107 95 88 21 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 77 115 111 6 105 0 67 15</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\HARDWARE\xp2116\xp2116.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 54 110 97 98 107 95 67 15 21 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 77 115 111 6 105 68 119 117 118</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\USER\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 7 93 21 54 110 97 98 107 95 50 20 12 106 86 18 22 103 17 73 109 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_exti.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 55</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 111 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 77 115 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_rcu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 99</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 21 54 110 97 98 107 95 50 20 12 106 86 18 22 103 17 73 109 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 88 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_debug.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 113</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 115 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 77 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_dma.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 83</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 73 109 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 65</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 103 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 17 73 109 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_syscfg.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 58</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 11</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 6 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 77 115 111 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\system_cs32f0xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 101</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\startup_cs32f036.S</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 59</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 1</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_misc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 108</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 77 115 111 6</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_tim.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 82</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 96 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_crc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 84</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 63 94 91 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_wwdt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 81</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 77 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 2 26 96 88 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_fwdt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 75</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 91 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 2 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_pmu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2 21 54 110 97 98 107 95 50 20 12 106 86 18 22 93 103 17 73 109 63 94 91 26 96 88 77 115 111 6 105</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_adc.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_spi.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_exti.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_rcu.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_usart.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_debug.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_dma.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_gpio.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_syscfg.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\system_cs32f0xx.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_i2c.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_flash.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_misc.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_tim.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_crc.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_wwdt.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_fwdt.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\..\..\Users\WFJ\IAR-CMSIS-Packs\Chipsea\CS32F03x_DFP\2.0.5\Device\HAL_Driver\src\cs32f0xx_pmu.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\startup_cs32f036.S</name>
+            <tool>AARM</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

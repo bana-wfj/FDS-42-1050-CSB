@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+
+  <packages/>
+
+  <device Dclock="48000000" Dcore="Cortex-M0" DcoreVersion="r0p0" Dendian="Little-endian" Dfamily="CS32F0 Series" Dfpu="NO_FPU" Dmpu="NO_MPU" Dname="CS32F036F6P7" DsubFamily="CS32F036" Dvendor="Chipsea" info="ARM , 4 KB RAM, 32 KB ROM" url="http://www.keil.com/dd2/chipsea/cs32f036f6p7">
+
+    <package info="Chipsea Technologies(ShenZhen) CS32F0 Series Device Support, Drivers and Examples" name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+  </device>
+
+  <toolchain Tcompiler="IAR" Toutput="exe"/>
+
+  <components>
+
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.6.0">
+
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.9.0"/>
+
+      <file category="doc" name="CMSIS/Documentation/Core/html/index.html"/>
+
+      <file category="include" name="CMSIS/Core/Include/"/>
+
+      <file category="header" condition="TrustZone" name="CMSIS/Core/Include/tz_context.h"/>
+
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/main_s.c" select="Secure mode 'main' module for ARMv8-M" version="1.1.1"/>
+
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/tz_context.c" select="RTOS Context Management (TrustZone for ARMv8-M)" version="1.1.1"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="ADC" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_adc.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_adc.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="CRC" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_crc.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_crc.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="DEBUG" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_debug.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_debug.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="DMA" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_dma.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_dma.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="EXTI" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_exti.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_exti.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="Flash" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_flash.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_flash.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="Framework" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="doc" deviceDependent="1" name="Documents/cs32f0xx_HAL_lib_um.chm"/>
+
+      <file category="include" deviceDependent="1" name="Device/HAL_Driver/inc/"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_misc.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_misc.c"/>
+
+      <file attr="config" category="source" condition="CS32F036" deviceDependent="1" name="Device/HAL_Driver/templates/Inc/cs32f0xx_conf.h" version="1.0.0"/>
+
+      <file attr="template" category="header" deviceDependent="1" name="Device/HAL_Driver/templates/Inc/cs32f0xx_it.h" select="Interrupt Service Routines"/>
+
+      <file attr="template" category="source" deviceDependent="1" name="Device/HAL_Driver/templates/Src/cs32f0xx_it.c" select="Interrupt Service Routines"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="FWDT" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_fwdt.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_fwdt.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="GPIO" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_gpio.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_gpio.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="I2C" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_i2c.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_i2c.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="PMU" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_pmu.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_pmu.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="RCU" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_rcu.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_rcu.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="SPI" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_spi.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_spi.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="SYSCFG" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_syscfg.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_syscfg.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="TIM" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_tim.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_tim.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="USART" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_usart.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_usart.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="HAL" Csub="WWDT" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="header" deviceDependent="1" name="Device/HAL_Driver/inc/cs32f0xx_wwdt.h"/>
+
+      <file category="source" deviceDependent="1" name="Device/HAL_Driver/src/cs32f0xx_wwdt.c"/>
+
+    </component>
+
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Chipsea" Cversion="1.0.0" deviceDependent="1">
+
+      <package name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+
+      <file category="include" deviceDependent="1" name="Device/Include/"/>
+
+      <file attr="config" category="source" condition="CS32F036 IAR" deviceDependent="1" name="Device/Source/IAR/startup_cs32f036.S" version="1.0.0"/>
+
+      <file attr="config" category="source" deviceDependent="1" name="Device/Source/system_cs32f0xx.c" version="1.0.0"/>
+
+    </component>
+
+  </components>
+
+  <apis/>
+
+</configuration>
+

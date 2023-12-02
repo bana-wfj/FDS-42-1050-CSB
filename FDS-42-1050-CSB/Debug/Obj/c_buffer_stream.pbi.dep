@@ -1,0 +1,9 @@
+c_buffer_stream.pbi: \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdbool.h \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  C:\workspace\mcu\FDS-42-1050\ CSB\HARDWARE\pingbuffer\c_buffer_stream.h \
+  C:\workspace\mcu\FDS-42-1050\ CSB\HARDWARE\pingbuffer\c_buffer_stream.c

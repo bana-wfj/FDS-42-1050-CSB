@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+  <packages/>
+  <device Dclock="48000000" Dcore="Cortex-M0" DcoreVersion="r0p0" Dendian="Little-endian" Dfamily="CS32F0 Series" Dfpu="NO_FPU" Dmpu="NO_MPU" Dname="CS32F036F6P7" DsubFamily="CS32F036" Dvendor="Chipsea" info="ARM , 4 KB RAM, 32 KB ROM" url="http://www.keil.com/dd2/chipsea/cs32f036f6p7">
+    <package info="Chipsea Technologies(ShenZhen) CS32F0 Series Device Support, Drivers and Examples" name="CS32F03x_DFP" url="http://www.keil.com/pack/" vendor="Chipsea" version="2.0.5"/>
+  </device>
+  <toolchain Tcompiler="IAR" Toutput="exe"/>
+  <components/>
+  <apis/>
+</configuration>
