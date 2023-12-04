@@ -63,7 +63,7 @@ static void timer6_init(uint16_t psa, uint16_t arr)
 *@brief 初始化 xp2116 的串口
 *@param baud: 波特率
 */
-void xp2116_usart_init(uint16_t baud)
+void xp2116_usart_init(uint32_t baud)
 {
 	
 	usart_config_t ptr_config;
@@ -74,7 +74,7 @@ void xp2116_usart_init(uint16_t baud)
 	usart_gpio_init();
 	
 	//定时 10 ms
-	timer6_init(2400-1, 100 - 1);
+	timer6_init(4800-1, 100-1);
 	
 	ptr_config.baud_rate = baud;
 	ptr_config.data_width = USART_DATA_WIDTH_8;

@@ -6,6 +6,8 @@
 
 --plugin="C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
 
+--device_macro="C:\software_install\IAR Systems\Embedded Workbench 8.3\arm/config/debugger/ChipSea/CS32F03x.dmac" 
+
 
 
 

@@ -6,11 +6,11 @@
 
 "-p" 
 
-"C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\.iar\config\debugger\CS32F036F6P7.ddf" 
+"C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\CONFIG\debugger\ChipSea\CS32F036F6.ddf" 
 
 "--semihosting" 
 
-"--device=CS32F036F6P7" 
+"--device=CS32F036F6" 
 
 "--multicore_nr_of_cores=1" 
 

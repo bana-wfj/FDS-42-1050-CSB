@@ -139,6 +139,16 @@ static void xp2116_update_state(xp2116_t *xp2116)
 
 
 /**
+*@brief 封装 xp2116 的发送函数 
+*@param 发送数据
+*@param 发送的长度
+*/
+static void xp2116_usart_send_data(uint8_t *data, uint16_t len)
+{
+	xp2116_usart_send_func(data, len);
+}
+
+/**
 *@brief xp2116 发送数据函数，是所有 xp2116 共用的发送函数
 */
 static void xp2116_send_func(void)
@@ -168,14 +178,14 @@ static void xp2116_send_func(void)
 			
 			//专家模式
 			if(data_item.len >= 8) {
-				xp2116_usart_send_func(&data_item.data[0], 4);
+				xp2116_usart_send_data(&data_item.data[0], 4);
 				delay_us(50);
-				xp2116_usart_send_func(&data_item.data[4], 4);
+				xp2116_usart_send_data(&data_item.data[4], 4);
 				
 				//普通模式
 				if(data_item.len == 12) {
 					delay_us(50);
-					xp2116_usart_send_func(&data_item.data[8], 4);
+					xp2116_usart_send_data(&data_item.data[8], 4);
 				}   
 			}
 			
@@ -186,7 +196,7 @@ static void xp2116_send_func(void)
 				NEWEST_READ_ADDR = data_item.data[TX_BUF_REG_ADDR_INDEX];	
 			}
 			//发送数据
-			xp2116_usart_send_func(data_item.data, data_item.len);
+			xp2116_usart_send_data(data_item.data, data_item.len);
 		}
 	}
 }
@@ -366,12 +376,13 @@ void xp2116_poweroff(xp2116_t *xp2116)
 /**
 *@brief xp2116 需要定时执行的函数，最好 1ms 执行一次
 */	
-void xp2116_time_func(void)
+void xp2116_run_time(void)
 {
 	static uint32_t run_time = 0;  //记录运行时间
 	static bool if_need_update = false;
 	static uint8_t device_num = 0;
 	static uint8_t time_inter = 0;
+	
 	//判断发送队列是否为空
 	if(!is_empty_queue(&xp2116_tx_queue)) {		
 		xp2116_send_func();	
@@ -413,25 +424,43 @@ void xp2116_time_func(void)
 *@brief 读取 xp2116 对应寄存器的值
 *@param xp2116: xp2116 实体
 *@param reg_addr: 寄存器地址
+*@param data: 保存读取到的数据
 *@param len: 读取的长度
 *@return 返回实际读取的长度
 */
-uint8_t get_reg_value(xp2116_t *xp2116, uint8_t reg_addr, uint8_t len)
+uint8_t get_reg_value(xp2116_t *xp2116, uint8_t reg_addr, uint8_t *data, uint8_t len)
 {
+	uint8_t i = 0;
+	
 	if(xp2116->state != XP2116_STATE_USABLE)
-		return;
+		return 0;
+	
 	
 	//读写寄存器
 	if(SELECT_REG_RANGE(reg_addr) == WRITE_READ_REG) {
 		
+		for(i = 0; i < len; i++) {
+			
+			if(((reg_addr - XP2116_RDWR_REG_START_ADDR) + i) >= XP2116_RDWR_REG_LENGHT)
+				break;
+			
+			data[i] = xp2116->rdwr_reg[(reg_addr - XP2116_RDWR_REG_START_ADDR) + i];
+		}
+		
 		
 	} else if(SELECT_REG_RANGE(reg_addr) == READ_ONLY_REG) {   //只读寄存器
 		
-		
+		for(i = 0; i < len; i++) {
+			
+			if(((reg_addr - XP2116_ONLYREAD_REG_START_ADDR) + i) >= XP2116_READONLY_REG_LENGHT)
+				break;
+			
+			data[i] = xp2116->only_read_reg[(reg_addr - XP2116_ONLYREAD_REG_START_ADDR) + i];
+		}
 		
 	}
 	
-	
+	return i;
 }
 
 

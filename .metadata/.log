@@ -106,3 +106,24 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\workspace\mcu\FD
 
 !ENTRY com.iar.cmsismanager.product 1 0 2023-12-01 14:59:52.297
 !MESSAGE CMSIS Agent interface registered with service registry at ServiceLocation(host:\\.\pipe\iar-cspy-cpp-binary-com.iar.thrift.service.registry-da3a2691-d58f-4c8a-b27e-b9097e211632-1, port:0, protocol:Binary, transport:Pipe)
+
+!ENTRY com.iar.cmsismanager.product 1 0 2023-12-04 14:50:51.944
+!MESSAGE CMSIS Agent interface deregistered with service registry at ServiceLocation(host:\\.\pipe\iar-cspy-cpp-binary-com.iar.thrift.service.registry-da3a2691-d58f-4c8a-b27e-b9097e211632-1, port:0, protocol:Binary, transport:Pipe)
+
+!ENTRY com.iar.cmsismanager.product 1 0 2023-12-04 14:50:51.946
+!MESSAGE Exiting workbench is response to shutdown() command.
+!SESSION 2023-12-04 14:51:10.982 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\workspace\mcu\FDS-42-1050 CSB
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-12-04 14:51:17.134
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.iar.cdt.arm.toolchain.cmsis.adapter 1 0 2023-12-04 14:51:17.243
+!MESSAGE Using CMSIS pack repositories: http://links.iar.com/cmsis/pack
+
+!ENTRY com.iar.cmsismanager.product 1 0 2023-12-04 14:51:19.555
+!MESSAGE CMSIS Agent interface registered with service registry at ServiceLocation(host:\\.\pipe\iar-cspy-cpp-binary-com.iar.thrift.service.registry-c2b9ad84-d566-4661-a92d-695d0ff18fda-1, port:0, protocol:Binary, transport:Pipe)

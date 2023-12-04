@@ -1,5 +1,5 @@
-main.pbi: C:\workspace\mcu\FDS-42-1050\ CSB\USER\main.c \
-  C:\workspace\mcu\FDS-42-1050\ CSB\USER/main.h \
+main.pbi: C:\workspace\mcu\FDS-42-1050\ CSB\USER\src\main.c \
+  C:\workspace\mcu\FDS-42-1050\ CSB\FDS-42-1050-CSB\..\USER\inc\main.h \
   C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device\HAL_Driver\inc\cs32f0xx_rcu.h \
   C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device/Include\cs32f0xx.h \
   C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
@@ -31,4 +31,7 @@ main.pbi: C:\workspace\mcu\FDS-42-1050\ CSB\USER\main.c \
   C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device\HAL_Driver\inc\cs32f0xx_debug.h \
   C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device\HAL_Driver\inc\cs32f0xx_exti.h \
   C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device\HAL_Driver\inc\cs32f0xx_syscfg.h \
-  C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device\HAL_Driver\inc\cs32f0xx_misc.h
+  C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device\HAL_Driver\inc\cs32f0xx_misc.h \
+  C:\workspace\mcu\FDS-42-1050\ CSB\FDS-42-1050-CSB\..\USER\inc\delay.h \
+  C:\software_install\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdbool.h \
+  C:\workspace\mcu\FDS-42-1050\ CSB\FDS-42-1050-CSB\..\HARDWARE\usart\usartx.h

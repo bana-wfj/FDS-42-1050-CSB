@@ -44,7 +44,7 @@
                 </option>
                 <option>
                     <name>OGCoreOrChip</name>
-                    <state>2</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelect</name>
@@ -78,7 +78,7 @@
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state>Default	None</state>
+                    <state>CS32F036F6	ChipSea CS32F036F6</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
@@ -138,7 +138,7 @@
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>Default	None</state>
+                    <state>CS32F036F6	ChipSea CS32F036F6</state>
                 </option>
                 <option>
                     <name>FPU2</name>
@@ -351,6 +351,7 @@
                     <state>$PROJ_DIR$\..\HARDWARE\pingbuffer</state>
                     <state>$PROJ_DIR$\..\HARDWARE\xp2116</state>
                     <state>$PROJ_DIR$\..\HARDWARE\usart</state>
+                    <state>$PROJ_DIR$\..\USER\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2116,145 +2117,6 @@
         </settings>
     </configuration>
     <group>
-        <name>CMSIS-Pack</name>
-        <tag>CMSISPack.Component</tag>
-        <file>
-            <name>$PROJ_DIR$\RTE\RTE_Components.h</name>
-        </file>
-        <group>
-            <name>Device Startup</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\startup_cs32f036.S</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\system_cs32f0xx.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL ADC</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_adc.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL CRC</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_crc.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL DEBUG</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_debug.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL DMA</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_dma.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL EXTI</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_exti.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL Flash</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_flash.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL Framework</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\cs32f0xx_conf.h</name>
-            </file>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_misc.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL FWDT</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_fwdt.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL GPIO</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_gpio.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL I2C</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_i2c.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL PMU</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_pmu.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL RCU</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_rcu.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL SPI</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_spi.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL SYSCFG</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_syscfg.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL TIM</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_tim.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL USART</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_usart.c</name>
-            </file>
-        </group>
-        <group>
-            <name>Device.HAL WWDT</name>
-            <tag>CMSISPack.Component</tag>
-            <file>
-                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_wwdt.c</name>
-            </file>
-        </group>
-    </group>
-    <group>
         <name>HARDWARE</name>
         <file>
             <name>$PROJ_DIR$\..\HARDWARE\pingbuffer\pingbuffer.c</name>
@@ -2269,8 +2131,153 @@
     <group>
         <name>USER</name>
         <file>
-            <name>$PROJ_DIR$\..\USER\main.c</name>
+            <name>$PROJ_DIR$\..\USER\src\app.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\USER\src\delay.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\USER\src\main.c</name>
+        </file>
+    </group>
+    <group>
+        <name>CMSIS-Pack</name>
+        <tag>CMSISPack.Component</tag>
+        <file>
+            <name>$PROJ_DIR$\RTE\RTE_Components.h</name>
+        </file>
+        <group>
+            <name>Device.HAL WWDT</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_wwdt.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL USART</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_usart.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL TIM</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_tim.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL SYSCFG</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_syscfg.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL SPI</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_spi.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL RCU</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_rcu.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL PMU</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_pmu.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL I2C</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_i2c.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL GPIO</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_gpio.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL FWDT</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_fwdt.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL Framework</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\cs32f0xx_conf.h</name>
+            </file>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_misc.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL Flash</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_flash.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL EXTI</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_exti.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL DMA</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_dma.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL DEBUG</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_debug.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL CRC</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_crc.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device.HAL ADC</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>${CMSIS_PACK_PATH_Chipsea#CS32F03x_DFP#2.0.5}$\Device/HAL_Driver/src/cs32f0xx_adc.c</name>
+            </file>
+        </group>
+        <group>
+            <name>Device Startup</name>
+            <tag>CMSISPack.Component</tag>
+            <file>
+                <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\startup_cs32f036.S</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\RTE\Device\CS32F036F6P7\system_cs32f0xx.c</name>
+            </file>
+        </group>
     </group>
     <cmsisPackSettings>
         <rte>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;

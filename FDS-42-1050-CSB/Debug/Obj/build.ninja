@@ -20,33 +20,35 @@ rule browsedata
 
 
 #Build steps
+build system_cs32f0xx.pbi : index system_cs32f0xx.xcl
+build cs32f0xx_adc.pbi : index cs32f0xx_adc.xcl
+build cs32f0xx_crc.pbi : index cs32f0xx_crc.xcl
+build cs32f0xx_debug.pbi : index cs32f0xx_debug.xcl
+build cs32f0xx_dma.pbi : index cs32f0xx_dma.xcl
+build cs32f0xx_exti.pbi : index cs32f0xx_exti.xcl
+build cs32f0xx_flash.pbi : index cs32f0xx_flash.xcl
+build cs32f0xx_misc.pbi : index cs32f0xx_misc.xcl
+build cs32f0xx_fwdt.pbi : index cs32f0xx_fwdt.xcl
+build cs32f0xx_gpio.pbi : index cs32f0xx_gpio.xcl
+build cs32f0xx_i2c.pbi : index cs32f0xx_i2c.xcl
+build cs32f0xx_pmu.pbi : index cs32f0xx_pmu.xcl
+build cs32f0xx_rcu.pbi : index cs32f0xx_rcu.xcl
+build cs32f0xx_spi.pbi : index cs32f0xx_spi.xcl
+build cs32f0xx_syscfg.pbi : index cs32f0xx_syscfg.xcl
+build cs32f0xx_tim.pbi : index cs32f0xx_tim.xcl
+build cs32f0xx_usart.pbi : index cs32f0xx_usart.xcl
+build cs32f0xx_wwdt.pbi : index cs32f0xx_wwdt.xcl
 build pingbuffer.pbi : index pingbuffer.xcl
 build usartx.pbi : index usartx.xcl
 build xp2116.pbi : index xp2116.xcl
+build app.pbi : index app.xcl
+build delay.pbi : index delay.xcl
 build main.pbi : index main.xcl
-build cs32f0xx_wwdt.pbi : index cs32f0xx_wwdt.xcl
-build cs32f0xx_usart.pbi : index cs32f0xx_usart.xcl
-build cs32f0xx_tim.pbi : index cs32f0xx_tim.xcl
-build cs32f0xx_syscfg.pbi : index cs32f0xx_syscfg.xcl
-build cs32f0xx_spi.pbi : index cs32f0xx_spi.xcl
-build cs32f0xx_rcu.pbi : index cs32f0xx_rcu.xcl
-build cs32f0xx_pmu.pbi : index cs32f0xx_pmu.xcl
-build cs32f0xx_i2c.pbi : index cs32f0xx_i2c.xcl
-build cs32f0xx_gpio.pbi : index cs32f0xx_gpio.xcl
-build cs32f0xx_fwdt.pbi : index cs32f0xx_fwdt.xcl
-build cs32f0xx_misc.pbi : index cs32f0xx_misc.xcl
-build cs32f0xx_flash.pbi : index cs32f0xx_flash.xcl
-build cs32f0xx_exti.pbi : index cs32f0xx_exti.xcl
-build cs32f0xx_dma.pbi : index cs32f0xx_dma.xcl
-build cs32f0xx_debug.pbi : index cs32f0xx_debug.xcl
-build cs32f0xx_crc.pbi : index cs32f0xx_crc.xcl
-build cs32f0xx_adc.pbi : index cs32f0xx_adc.xcl
-build system_cs32f0xx.pbi : index system_cs32f0xx.xcl
-build FDS-42-1050-CSB_part0.pbi : link pingbuffer.pbi usartx.pbi xp2116.pbi main.pbi cs32f0xx_wwdt.pbi
-build FDS-42-1050-CSB_part1.pbi : link cs32f0xx_usart.pbi cs32f0xx_tim.pbi cs32f0xx_syscfg.pbi cs32f0xx_spi.pbi cs32f0xx_rcu.pbi
-build FDS-42-1050-CSB_part2.pbi : link cs32f0xx_pmu.pbi cs32f0xx_i2c.pbi cs32f0xx_gpio.pbi cs32f0xx_fwdt.pbi cs32f0xx_misc.pbi
-build FDS-42-1050-CSB_part3.pbi : link cs32f0xx_flash.pbi cs32f0xx_exti.pbi cs32f0xx_dma.pbi cs32f0xx_debug.pbi cs32f0xx_crc.pbi
-build FDS-42-1050-CSB_part4.pbi : link cs32f0xx_adc.pbi system_cs32f0xx.pbi
+build FDS-42-1050-CSB_part0.pbi : link system_cs32f0xx.pbi cs32f0xx_adc.pbi cs32f0xx_crc.pbi cs32f0xx_debug.pbi cs32f0xx_dma.pbi
+build FDS-42-1050-CSB_part1.pbi : link cs32f0xx_exti.pbi cs32f0xx_flash.pbi cs32f0xx_misc.pbi cs32f0xx_fwdt.pbi cs32f0xx_gpio.pbi
+build FDS-42-1050-CSB_part2.pbi : link cs32f0xx_i2c.pbi cs32f0xx_pmu.pbi cs32f0xx_rcu.pbi cs32f0xx_spi.pbi cs32f0xx_syscfg.pbi
+build FDS-42-1050-CSB_part3.pbi : link cs32f0xx_tim.pbi cs32f0xx_usart.pbi cs32f0xx_wwdt.pbi pingbuffer.pbi usartx.pbi
+build FDS-42-1050-CSB_part4.pbi : link xp2116.pbi app.pbi delay.pbi main.pbi
 build FDS-42-1050-CSB.pbd : link FDS-42-1050-CSB_part0.pbi FDS-42-1050-CSB_part1.pbi FDS-42-1050-CSB_part2.pbi FDS-42-1050-CSB_part3.pbi FDS-42-1050-CSB_part4.pbi
 build FDS-42-1050-CSB.pbw : browsedata FDS-42-1050-CSB.pbd
 

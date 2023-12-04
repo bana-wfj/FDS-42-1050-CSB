@@ -66,6 +66,8 @@ C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\HARDWARE\xp2116
 -I
 C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\HARDWARE\usart
 -I
+C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\USER\inc
+-I
 C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\Core\Include
 -I
 C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\DSP\Include
@@ -129,6 +131,8 @@ C:\workspace\mcu\FDS-42-1050 CSB\HARDWARE\pingbuffer
 C:\workspace\mcu\FDS-42-1050 CSB\HARDWARE\xp2116
 -I
 C:\workspace\mcu\FDS-42-1050 CSB\HARDWARE\usart
+-I
+C:\workspace\mcu\FDS-42-1050 CSB\USER\inc
 -I
 C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\Core\Include
 -I

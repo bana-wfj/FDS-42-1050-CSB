@@ -1,4 +1,4 @@
-"C:\workspace\mcu\FDS-42-1050 CSB\USER\main.c"
+"C:\workspace\mcu\FDS-42-1050 CSB\USER\src\main.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
@@ -8,7 +8,7 @@ C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\Debug\Obj\main.pbi.dep
 -o
 main.pbi
 -I
-C:\workspace\mcu\FDS-42-1050 CSB\USER
+C:\workspace\mcu\FDS-42-1050 CSB\USER\src
 -I
 C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\Device/Include
 -I
@@ -65,6 +65,8 @@ C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\HARDWARE\pingbuffer
 C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\HARDWARE\xp2116
 -I
 C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\HARDWARE\usart
+-I
+C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\..\USER\inc
 -I
 C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\Core\Include
 -I
@@ -129,6 +131,8 @@ C:\workspace\mcu\FDS-42-1050 CSB\HARDWARE\pingbuffer
 C:\workspace\mcu\FDS-42-1050 CSB\HARDWARE\xp2116
 -I
 C:\workspace\mcu\FDS-42-1050 CSB\HARDWARE\usart
+-I
+C:\workspace\mcu\FDS-42-1050 CSB\USER\inc
 -I
 C:\software_install\IAR Systems\Embedded Workbench 8.3\arm\CMSIS\Core\Include
 -I

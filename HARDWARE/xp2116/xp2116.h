@@ -169,9 +169,9 @@ void xp2116_init(xp2116_t *xp2116);
 void xp2116_dimmer_func(xp2116_t *xp2116, uint16_t value);
 void xp2116_poweron(xp2116_t *xp2116, xp2116_mode_e mode);
 void xp2116_poweroff(xp2116_t *xp2116);
-void xp2116_time_func(void);
+void xp2116_run_time(void);
 void xp2116_rx_complete(uint8_t *data, uint8_t len);
-
+uint8_t get_reg_value(xp2116_t *xp2116, uint8_t reg_addr, uint8_t *data, uint8_t len);
 
 #endif
 

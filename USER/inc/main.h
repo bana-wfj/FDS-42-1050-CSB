@@ -4,4 +4,6 @@
 #include "cs32f0xx_rcu.h"
 
 
+void app_main(void);
+
 #endif

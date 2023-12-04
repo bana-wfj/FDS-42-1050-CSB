@@ -7,7 +7,7 @@
 #define XP2116_USART_RX_LEN   20
 
 
-
+void xp2116_usart_init(uint32_t baud);
 void xp2116_usart_send_func(uint8_t *data, uint16_t len);
 
 #endif

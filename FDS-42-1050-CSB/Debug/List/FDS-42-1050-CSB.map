@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.40.1.212/W32 for ARM                  02/Dec/2023  16:52:30
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  04/Dec/2023  14:52:43
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
@@ -10,8 +10,9 @@
 #        C:\workspace\mcu\FDS-42-1050
 #        CSB\FDS-42-1050-CSB\Debug\List\FDS-42-1050-CSB.map
 #    Command line =
-#        -f C:\Users\WFJ\AppData\Local\Temp\EWF2D6.tmp
-#        ("C:\workspace\mcu\FDS-42-1050
+#        -f C:\Users\WFJ\AppData\Local\Temp\EWF39.tmp
+#        ("C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\Debug\Obj\app.o"
+#        "C:\workspace\mcu\FDS-42-1050
 #        CSB\FDS-42-1050-CSB\Debug\Obj\cs32f0xx_adc.o"
 #        "C:\workspace\mcu\FDS-42-1050
 #        CSB\FDS-42-1050-CSB\Debug\Obj\cs32f0xx_crc.o"
@@ -45,6 +46,7 @@
 #        CSB\FDS-42-1050-CSB\Debug\Obj\cs32f0xx_usart.o"
 #        "C:\workspace\mcu\FDS-42-1050
 #        CSB\FDS-42-1050-CSB\Debug\Obj\cs32f0xx_wwdt.o"
+#        "C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\Debug\Obj\delay.o"
 #        "C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\Debug\Obj\main.o"
 #        "C:\workspace\mcu\FDS-42-1050
 #        CSB\FDS-42-1050-CSB\Debug\Obj\pingbuffer.o"
@@ -58,8 +60,9 @@
 #        CSB\FDS-42-1050-CSB\Debug\Exe\FDS-42-1050-CSB.out" --map
 #        "C:\workspace\mcu\FDS-42-1050
 #        CSB\FDS-42-1050-CSB\Debug\List\FDS-42-1050-CSB.map" --config
-#        C:/Users/WFJ/IAR-CMSIS-Packs/Chipsea/CS32F03x_DFP/2.0.5/\.iar\config\linker\CS32F036F6P7.icf
-#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#        "C:\software_install\IAR Systems\Embedded Workbench
+#        8.3\arm/config/linker/ChipSea/CS32F036F6.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
 
@@ -87,97 +90,111 @@ application.
 ***
 
 "A0":  place at address 0x800'0000 { ro section .intvec };
-"P1":  place in [from 0x0 to 0x0] |
-                [from 0x800'0000 to 0x800'7fff] { ro };
-define block CSTACK with size = 512, alignment = 8 { };
+"P1":  place in [from 0x800'0000 to 0x800'7fff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
 define block HEAP with size = 1K, alignment = 8 { };
-"P3":  place in [from 0x0 to 0x0] |
-                [from 0x2000'0000 to 0x2000'0fff] {
+"P2":  place in [from 0x2000'0000 to 0x2000'0fff] {
           rw, block CSTACK, block HEAP };
+initialize by copy { rw };
 
-No sections matched the following patterns:
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xb8
+  .intvec            ro code   0x800'0000    0xb8  startup_cs32f036.o [1]
+                             - 0x800'00b8    0xb8
 
-  ro section application_specific_ro  in "P2|P4"
-  rw section application_specific_rw  in "P2|P4"
+"P1":                                      0x1138
+  .text              ro code   0x800'00b8   0x3c8  xp2116.o [1]
+  .text              ro code   0x800'0480   0x28e  pingbuffer.o [1]
+  .text              ro code   0x800'070e     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'0710   0x2d4  usartx.o [1]
+  .text              ro code   0x800'09e4    0xae  I32DivModFast.o [3]
+  .text              ro code   0x800'0a92    0x14  memset.o [3]
+  .text              ro code   0x800'0aa6     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'0aa8    0x78  cs32f0xx_tim.o [1]
+  .text              ro code   0x800'0b20    0xcc  cs32f0xx_usart.o [1]
+  .text              ro code   0x800'0bec     0x2  IntDivZer.o [3]
+  .text              ro code   0x800'0bee     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'0bf0    0x4e  ABImemset.o [3]
+  .text              ro code   0x800'0c3e     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'0c40   0x168  cs32f0xx_rcu.o [1]
+  .text              ro code   0x800'0da8   0x108  delay.o [1]
+  .text              ro code   0x800'0eb0    0xe0  system_cs32f0xx.o [1]
+  .text              ro code   0x800'0f90    0xac  main.o [1]
+  .text              ro code   0x800'103c    0x50  app.o [1]
+  .text              ro code   0x800'108c    0x3c  zero_init3.o [3]
+  .text              ro code   0x800'10c8    0x30  copy_init3.o [3]
+  .text              ro code   0x800'10f8    0x28  data_init.o [3]
+  .iar.init_table    const     0x800'1120    0x24  - Linker created -
+  .text              ro code   0x800'1144    0x1e  cmain.o [3]
+  .text              ro code   0x800'1162     0x4  low_level_init.o [2]
+  .text              ro code   0x800'1166     0x8  exit.o [2]
+  .text              ro code   0x800'116e     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'1170     0xa  cexit.o [3]
+  .text              ro code   0x800'117a     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'117c    0x14  exit.o [4]
+  Initializer bytes  const     0x800'1190    0x18  <for P2-1>
+  .text              ro code   0x800'11a8     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11ac    0x10  startup_cs32f036.o [1]
+  .text              ro code   0x800'11bc     0xc  cstartup_M.o [3]
+  .text              ro code   0x800'11c8     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11ca     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11cc     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11ce     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11d0     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11d2     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11d4     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11d6     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11d8     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11da     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11dc     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11de     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11e0     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11e2     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11e4     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11e6     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11e8     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11ea     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11ec     0x2  startup_cs32f036.o [1]
+  .text              ro code   0x800'11ee     0x2  startup_cs32f036.o [1]
+  .rodata            const     0x800'11f0     0x0  zero_init3.o [3]
+  .rodata            const     0x800'11f0     0x0  copy_init3.o [3]
+                             - 0x800'11f0  0x1138
 
+"P2", part 1 of 3:                           0x18
+  P2-1                        0x2000'0000    0x15  <Init block>
+    .data            inited   0x2000'0000    0x10  cs32f0xx_rcu.o [1]
+    .data            inited   0x2000'0010     0x4  system_cs32f0xx.o [1]
+    .data            inited   0x2000'0014     0x1  xp2116.o [1]
+                            - 0x2000'0015    0x15
 
-  Section          Kind         Address   Size  Object
-  -------          ----         -------   ----  ------
-"A0":                                     0xb8
-  .intvec          ro code   0x800'0000   0xb8  startup_cs32f036.o [1]
-                           - 0x800'00b8   0xb8
+"P2", part 2 of 3:                          0x26c
+  .bss               zero     0x2000'0018   0x108  xp2116.o [1]
+  .bss               zero     0x2000'0120   0x108  xp2116.o [1]
+  .bss               zero     0x2000'0228    0x1c  app.o [1]
+  .bss               zero     0x2000'0244    0x1c  xp2116.o [1]
+  .bss               zero     0x2000'0260    0x14  usartx.o [1]
+  .bss               zero     0x2000'0274     0x4  delay.o [1]
+  .bss               zero     0x2000'0278     0x4  xp2116.o [1]
+  .bss               zero     0x2000'027c     0x1  usartx.o [1]
+  .bss               zero     0x2000'027d     0x1  xp2116.o [1]
+  .bss               zero     0x2000'027e     0x1  xp2116.o [1]
+  .bss               zero     0x2000'027f     0x1  xp2116.o [1]
+  .bss               zero     0x2000'0280     0x1  xp2116.o [1]
+                            - 0x2000'0281   0x269
 
-"P1":                                    0x62e
-  .text            ro code   0x800'00b8  0x108  pingbuffer.o [1]
-  .text            ro code   0x800'01c0   0xae  I32DivModFast.o [3]
-  .text            ro code   0x800'026e   0x14  memset.o [3]
-  .text            ro code   0x800'0282    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'0284    0x2  IntDivZer.o [3]
-  .text            ro code   0x800'0286    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'0288   0x4e  ABImemset.o [3]
-  .text            ro code   0x800'02d6    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'02d8   0xe0  system_cs32f0xx.o [1]
-  .text            ro code   0x800'03b8   0xc0  usartx.o [1]
-  .text            ro code   0x800'0478   0x4c  xp2116.o [1]
-  .text            ro code   0x800'04c4   0xb4  cs32f0xx_rcu.o [1]
-  .text            ro code   0x800'0578   0x64  main.o [1]
-  .text            ro code   0x800'05dc   0x3c  zero_init3.o [3]
-  .text            ro code   0x800'0618   0x28  data_init.o [3]
-  .iar.init_table  const     0x800'0640   0x10  - Linker created -
-  .text            ro code   0x800'0650   0x1e  cmain.o [3]
-  .text            ro code   0x800'066e    0x4  low_level_init.o [2]
-  .text            ro code   0x800'0672    0x8  exit.o [2]
-  .text            ro code   0x800'067a    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'067c    0xa  cexit.o [3]
-  .text            ro code   0x800'0686    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'0688   0x14  exit.o [4]
-  .text            ro code   0x800'069c   0x10  startup_cs32f036.o [1]
-  .text            ro code   0x800'06ac    0xc  cstartup_M.o [3]
-  .text            ro code   0x800'06b8    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06ba    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06bc    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06be    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06c0    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06c2    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06c4    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06c6    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06c8    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06ca    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06cc    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06ce    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06d0    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06d2    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06d4    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06d6    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06d8    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06da    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06dc    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06de    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06e0    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06e2    0x2  startup_cs32f036.o [1]
-  .text            ro code   0x800'06e4    0x2  startup_cs32f036.o [1]
-  .rodata          const     0x800'06e6    0x0  zero_init3.o [3]
-                           - 0x800'06e6  0x62e
-
-"P3", part 1 of 2:                       0x120
-  .bss             zero     0x2000'0000  0x108  xp2116.o [1]
-  .bss             zero     0x2000'0108   0x14  usartx.o [1]
-  .bss             zero     0x2000'011c    0x1  usartx.o [1]
-  .bss             zero     0x2000'011d    0x1  xp2116.o [1]
-                          - 0x2000'011e  0x11e
-
-"P3", part 2 of 2:                       0x200
-  CSTACK                    0x2000'0120  0x200  <Block>
-    CSTACK         uninit   0x2000'0120  0x200  <Block tail>
-                          - 0x2000'0320  0x200
+"P2", part 3 of 3:                          0x400
+  CSTACK                      0x2000'0288   0x400  <Block>
+    CSTACK           uninit   0x2000'0288   0x400  <Block tail>
+                            - 0x2000'0688   0x400
 
 Unused ranges:
 
          From           To    Size
          ----           --    ----
-          0x0          0x0     0x1
-   0x800'06e6   0x800'7fff  0x791a
-  0x2000'0320  0x2000'0fff   0xce0
+   0x800'11f0   0x800'7fff  0x6e10
+  0x2000'0284  0x2000'0287     0x4
+  0x2000'0688  0x2000'0fff   0x978
 
 
 *******************************************************************************
@@ -187,8 +204,14 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x11e:
-          0x2000'0000  0x11e
+    1 destination range, total size 0x269:
+          0x2000'0018  0x269
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x18 (114% of destination):
+           0x800'1190   0x18
+    1 destination range, total size 0x15:
+          0x2000'0000   0x15
 
 
 
@@ -203,15 +226,19 @@ command line/config:
     Total:
 
 C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\Debug\Obj: [1]
-    cs32f0xx_rcu.o          180
-    main.o                  100
-    pingbuffer.o            264
-    startup_cs32f036.o      256
-    system_cs32f0xx.o       224
-    usartx.o                192                21
-    xp2116.o                 76               265
+    app.o                    80                28
+    cs32f0xx_rcu.o          360       16       16
+    cs32f0xx_tim.o          120
+    cs32f0xx_usart.o        204
+    delay.o                 264                 4
+    main.o                  172
+    pingbuffer.o            654
+    startup_cs32f036.o      254
+    system_cs32f0xx.o       224        4        4
+    usartx.o                724                21
+    xp2116.o                968        1      565
     ---------------------------------------------
-    Total:                1'292               286
+    Total:                4'024       21      638
 
 dl6M_tln.a: [2]
     exit.o                    8
@@ -225,21 +252,23 @@ rt6M_tl.a: [3]
     IntDivZer.o               2
     cexit.o                  10
     cmain.o                  30
+    copy_init3.o             48
     cstartup_M.o             12
     data_init.o              40
     memset.o                 20
     zero_init3.o             60
     ---------------------------------------------
-    Total:                  426
+    Total:                  474
 
 shb_l.a: [4]
     exit.o                   20
     ---------------------------------------------
     Total:                   20
 
-    Linker created                    16      512
+    Gaps                      2
+    Linker created                    39    1'024
 -------------------------------------------------
-    Grand Total:          1'750       16      798
+    Grand Total:          4'532       60    1'662
 
 
 *******************************************************************************
@@ -248,49 +277,97 @@ shb_l.a: [4]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x800'0640          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'0650          --   Gb  - Linker created -
-?main                    0x800'0651         Code  Gb  cmain.o [3]
-CSTACK$$Base            0x2000'0120          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'0320          --   Gb  - Linker created -
-NEWEST_READ_ADDR        0x2000'011d    0x1  Data  Lc  xp2116.o [1]
-Region$$Table$$Base      0x800'0640          --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'0650          --   Gb  - Linker created -
-SetSysClock              0x800'0331   0x52  Code  Lc  system_cs32f0xx.o [1]
-SystemInit               0x800'02d9   0x58  Code  Gb  system_cs32f0xx.o [1]
-TIM6_IRQHandler          0x800'041f   0x32  Code  Gb  usartx.o [1]
-USART2_IRQHandler        0x800'03e5   0x3a  Code  Gb  usartx.o [1]
-XP2116_USART_RX_BUF     0x2000'0108   0x14  Data  Gb  usartx.o [1]
-XP2116_USART_RX_COUNT   0x2000'011c    0x1  Data  Gb  usartx.o [1]
-__aeabi_idiv0            0x800'0285         Code  Gb  IntDivZer.o [3]
-__aeabi_memset           0x800'0289         Code  Gb  ABImemset.o [3]
-__aeabi_uidiv            0x800'01c1         Code  Gb  I32DivModFast.o [3]
-__aeabi_uidivmod         0x800'01c1         Code  Gb  I32DivModFast.o [3]
-__cmain                  0x800'0651         Code  Gb  cmain.o [3]
-__exit                   0x800'0689   0x14  Code  Gb  exit.o [4]
-__iar_Memset4_word       0x800'02a9         Code  Gb  ABImemset.o [3]
-__iar_Memset_word        0x800'0295         Code  Gb  ABImemset.o [3]
-__iar_data_init3         0x800'0619   0x28  Code  Gb  data_init.o [3]
-__iar_program_start      0x800'06ad         Code  Gb  cstartup_M.o [3]
-__iar_zero_init3         0x800'05dd   0x3c  Code  Gb  zero_init3.o [3]
-__low_level_init         0x800'066f    0x4  Code  Gb  low_level_init.o [2]
+.iar.init_table$$Base    0x800'1120          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'1144          --   Gb  - Linker created -
+?main                    0x800'1145         Code  Gb  cmain.o [3]
+APBAHBPrescTable        0x2000'0000   0x10  Data  Lc  cs32f0xx_rcu.o [1]
+CSTACK$$Base            0x2000'0288          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0688          --   Gb  - Linker created -
+NEWEST_READ_ADDR        0x2000'027d    0x1  Data  Lc  xp2116.o [1]
+Region$$Table$$Base      0x800'1120          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'1144          --   Gb  - Linker created -
+SetSysClock              0x800'0f09   0x52  Code  Lc  system_cs32f0xx.o [1]
+SysTick_Config           0x800'0e33   0x30  Code  Lc  delay.o [1]
+SysTick_Handler          0x800'0e73    0xa  Code  Gb  delay.o [1]
+SystemCoreClock         0x2000'0010    0x4  Data  Gb  system_cs32f0xx.o [1]
+SystemInit               0x800'0eb1   0x58  Code  Gb  system_cs32f0xx.o [1]
+TIM6_IRQHandler          0x800'094f   0x32  Code  Gb  usartx.o [1]
+USART2_IRQHandler        0x800'0915   0x3a  Code  Gb  usartx.o [1]
+XP2116_DEVICE_BUF       0x2000'0244   0x1c  Data  Lc  xp2116.o [1]
+XP2116_USART_RX_BUF     0x2000'0260   0x14  Data  Gb  usartx.o [1]
+XP2116_USART_RX_COUNT   0x2000'027c    0x1  Data  Gb  usartx.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'0fff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__NVIC_EnableIRQ         0x800'0711   0x18  Code  Lc  usartx.o [1]
+__NVIC_SetPriority       0x800'0da9   0x8a  Code  Lc  delay.o [1]
+__NVIC_SetPriority       0x800'0729   0x8a  Code  Lc  usartx.o [1]
+__aeabi_idiv0            0x800'0bed         Code  Gb  IntDivZer.o [3]
+__aeabi_memset           0x800'0bf1         Code  Gb  ABImemset.o [3]
+__aeabi_uidiv            0x800'09e5         Code  Gb  I32DivModFast.o [3]
+__aeabi_uidivmod         0x800'09e5         Code  Gb  I32DivModFast.o [3]
+__cmain                  0x800'1145         Code  Gb  cmain.o [3]
+__exit                   0x800'117d   0x14  Code  Gb  exit.o [4]
+__iar_Memset4_word       0x800'0c11         Code  Gb  ABImemset.o [3]
+__iar_Memset_word        0x800'0bfd         Code  Gb  ABImemset.o [3]
+__iar_copy_init3         0x800'10c9   0x30  Code  Gb  copy_init3.o [3]
+__iar_data_init3         0x800'10f9   0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'11bd         Code  Gb  cstartup_M.o [3]
+__iar_zero_init3         0x800'108d   0x3c  Code  Gb  zero_init3.o [3]
+__low_level_init         0x800'1163    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000         Data  Gb  startup_cs32f036.o [1]
-_call_main               0x800'065d         Code  Gb  cmain.o [3]
-_exit                    0x800'067d         Code  Gb  cexit.o [3]
-_main                    0x800'066b         Code  Gb  cmain.o [3]
-exit                     0x800'0673    0x8  Code  Gb  exit.o [2]
-main                     0x800'0579    0x8  Code  Gb  main.o [1]
-memset                   0x800'026f   0x14  Code  Gb  memset.o [3]
-pingbuffer_enter_queue   0x800'00db   0xe6  Code  Gb  pingbuffer.o [1]
-queue_used_space         0x800'00b9   0x22  Code  Gb  pingbuffer.o [1]
-rcu_def_init             0x800'04c5   0x52  Code  Gb  cs32f0xx_rcu.o [1]
-rcu_hxt_stabilization_wait
-                         0x800'0517   0x38  Code  Gb  cs32f0xx_rcu.o [1]
-system_lock_config       0x800'0581   0x4a  Code  Lc  main.o [1]
-timer6_restart           0x800'03b9   0x1a  Code  Lc  usartx.o [1]
-timer6_stop              0x800'03d3   0x12  Code  Lc  usartx.o [1]
-xp2116_rx_complete       0x800'0479   0x42  Code  Gb  xp2116.o [1]
-xp2116_rx_queue         0x2000'0000  0x108  Data  Lc  xp2116.o [1]
+_call_main               0x800'1151         Code  Gb  cmain.o [3]
+_exit                    0x800'1171         Code  Gb  cexit.o [3]
+_main                    0x800'115f         Code  Gb  cmain.o [3]
+app_main                 0x800'105b   0x2c  Code  Gb  app.o [1]
+app_xp2116_init          0x800'103d   0x16  Code  Lc  app.o [1]
+delay_init               0x800'0e63   0x10  Code  Gb  delay.o [1]
+delay_us                 0x800'00b9   0x22  Code  Lc  xp2116.o [1]
+exit                     0x800'1167    0x8  Code  Gb  exit.o [2]
+first_init              0x2000'0014    0x1  Data  Lc  xp2116.o [1]
+get_current_time         0x800'0e93    0x6  Code  Gb  delay.o [1]
+is_empty_queue           0x800'04ad   0x26  Code  Gb  pingbuffer.o [1]
+main                     0x800'0f91   0x1c  Code  Gb  main.o [1]
+memset                   0x800'0a93   0x14  Code  Gb  memset.o [3]
+pingbuffer_enter_queue   0x800'04f5   0xe6  Code  Gb  pingbuffer.o [1]
+pingbuffer_exit_queue    0x800'05db  0x134  Code  Gb  pingbuffer.o [1]
+pingbuffer_init          0x800'0481   0x2c  Code  Gb  pingbuffer.o [1]
+queue_used_space         0x800'04d3   0x22  Code  Gb  pingbuffer.o [1]
+rcu_clk_freq_get         0x800'0c93   0xde  Code  Gb  cs32f0xx_rcu.o [1]
+rcu_def_init             0x800'0c41   0x52  Code  Gb  cs32f0xx_rcu.o [1]
+system_lock_config       0x800'0fad   0x78  Code  Lc  main.o [1]
+systick_time            0x2000'0274    0x4  Data  Lc  delay.o [1]
+tim_base_init            0x800'0aa9   0x5c  Code  Gb  cs32f0xx_tim.o [1]
+timer6_init              0x800'080d   0x4c  Code  Lc  usartx.o [1]
+timer6_restart           0x800'08e9   0x1a  Code  Lc  usartx.o [1]
+timer6_stop              0x800'0903   0x12  Code  Lc  usartx.o [1]
+timer_task               0x800'1053    0x8  Code  Lc  app.o [1]
+usart_gpio_init          0x800'07b3   0x5a  Code  Lc  usartx.o [1]
+usart_init               0x800'0b21   0xb8  Code  Gb  cs32f0xx_usart.o [1]
+wait_delay_time          0x800'0e7d   0x16  Code  Gb  delay.o [1]
+xp2116_device_set_cmd    0x800'00db   0x78  Code  Lc  xp2116.o [1]
+xp2116_id4              0x2000'0228   0x1c  Data  Gb  app.o [1]
+xp2116_init              0x800'032b   0x56  Code  Gb  xp2116.o [1]
+xp2116_run_time          0x800'038d   0x88  Code  Gb  xp2116.o [1]
+xp2116_run_time::device_num
+                        0x2000'027f    0x1  Data  Lc  xp2116.o [1]
+xp2116_run_time::if_need_update
+                        0x2000'027e    0x1  Data  Lc  xp2116.o [1]
+xp2116_run_time::run_time
+                        0x2000'0278    0x4  Data  Lc  xp2116.o [1]
+xp2116_run_time::time_inter
+                        0x2000'0280    0x1  Data  Lc  xp2116.o [1]
+xp2116_rx_complete       0x800'041d   0x42  Code  Gb  xp2116.o [1]
+xp2116_rx_data_proces_func
+                         0x800'0219  0x112  Code  Lc  xp2116.o [1]
+xp2116_rx_queue         0x2000'0120  0x108  Data  Lc  xp2116.o [1]
+xp2116_send_func         0x800'0189   0x90  Code  Lc  xp2116.o [1]
+xp2116_tx_queue         0x2000'0018  0x108  Data  Lc  xp2116.o [1]
+xp2116_update_state      0x800'0153   0x2c  Code  Lc  xp2116.o [1]
+xp2116_usart_init        0x800'0859   0x52  Code  Gb  usartx.o [1]
+xp2116_usart_send_data   0x800'017f    0xa  Code  Lc  xp2116.o [1]
+xp2116_usart_send_func   0x800'08ab   0x3e  Code  Gb  usartx.o [1]
 
 
 [1] = C:\workspace\mcu\FDS-42-1050 CSB\FDS-42-1050-CSB\Debug\Obj
@@ -298,9 +375,9 @@ xp2116_rx_queue         0x2000'0000  0x108  Data  Lc  xp2116.o [1]
 [3] = rt6M_tl.a
 [4] = shb_l.a
 
-  1'750 bytes of readonly  code memory
-     16 bytes of readonly  data memory
-    798 bytes of readwrite data memory
+  4'532 bytes of readonly  code memory
+     60 bytes of readonly  data memory
+  1'662 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
